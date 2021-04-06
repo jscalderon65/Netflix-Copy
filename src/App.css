@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body,
+html {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./netflix-fondo.jpg);
+  width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow-x: hidden;
+}
+h1,h2{
   color: white;
+  width: 100%;
+  justify-self: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+input{
+  color: white;
+  margin-bottom: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 2px solid white;
+  height: 50px;
+  padding:5px;
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  transition: border-bottom 0.2s ease;
+}
+.aclass{
+  color:grey;
+  text-decoration: none;
+}
+.aclass:hover{
+  color:grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input:focus {
+  color:white;
+  border-bottom: 3px solid #E50914;
+  outline: none;
+}
+.App {
+  border: solid;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+button {
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  padding-top: 15px;
+  filter: brightness(1);
+  padding-bottom: 15px;
+}
+.footerLinks{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap:10px;
+}
+@media(max-width: 500px){
+  h1,h2{
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .footerLinks{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:10px;
   }
 }
